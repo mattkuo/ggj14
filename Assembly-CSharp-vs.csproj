@@ -50,6 +50,7 @@
      <Compile Include="Assets\ForceDirection.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\MoveWithPlatform.cs" />
+     <Compile Include="Assets\PlatePressed.cs" />
      <Compile Include="Assets\PlatformMove.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
