@@ -10,6 +10,8 @@ public class CharacterMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			transform.Translate(Vector3.right * 3 * Time.deltaTime);
+		}
 	}
 }
