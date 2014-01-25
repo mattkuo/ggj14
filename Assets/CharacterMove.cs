@@ -4,8 +4,9 @@ using System.Collections;
 public class CharacterMove : MonoBehaviour {
 
 	private int speed = 5;
-	private int jumpSpeed = 50;
 	private bool isGrounded = true;
+	public bool jump = false;
+	public float jumpForce = 300f;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,20 +21,21 @@ public class CharacterMove : MonoBehaviour {
 			transform.Translate(Vector3.left * speed * Time.deltaTime);
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			transform.Translate(Vector3.up * speed * Time.deltaTime);
+		if (Input.GetKey (KeyCode.UpArrow) && isGrounded == true) {
+			jump = true;
+			isGrounded = false;
 		}
 	}
 
-//	void FixedUpdate () {
-//		if (isGrounded && Input.GetKey (KeyCode.UpArrow)) {
-//			rigidbody2D.AddForce(Vector3.up * jumpSpeed);
-//			isGrounded = false;
-//		}
-//	}
-//
-//	void OnCollisionEnter () {
-//		isGrounded = true;
-//	}
+	void FixedUpdate () {
+		if (jump == true) {
+			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+			jump = false;
+		}
+	}
+
+	void OnCollisionEnter2D (Collision2D hit) {
+		isGrounded = true;
+	}
 
 }
