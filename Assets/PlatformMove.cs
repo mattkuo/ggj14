@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlatformMove : MonoBehaviour {
 
+
+	public 
 	// Use this for initialization
 	void Start () {
 	
