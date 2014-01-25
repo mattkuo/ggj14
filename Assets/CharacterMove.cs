@@ -44,6 +44,7 @@ public class CharacterMove : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (jump == true) {
+			print ("JUMP");
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 			jump = false;
 		}
