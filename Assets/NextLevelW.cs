@@ -26,11 +26,11 @@ public class NextLevelW : MonoBehaviour
 	{
 		print ("got into here");
 		if (collision.gameObject.name == "white_player") {
-			isBlackReady= true;	
+			isWhiteReady= true;	
 			print("black hit");
 		}
 		if (collision.gameObject.name == "black_player") {
-			isWhiteReady=true;
+			isBlackReady=true;
 			print ("white hit");
 		}
 		
@@ -47,6 +47,16 @@ public class NextLevelW : MonoBehaviour
 			isWhiteReady=false;
 			isBlackReady=false;
 		}
+	}
+	void OnCollisionExit2D(Collision2D collision){
+		if (collision.gameObject.name == "black_player") {
+			isBlackReady=false;
+		
+		}
+		if (collision.gameObject.name == "white_player") {
+			isWhiteReady=false;
+		}
+
 	}
 	
 }
