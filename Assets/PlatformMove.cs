@@ -6,7 +6,7 @@ public class PlatformMove : MonoBehaviour
 	public Transform DestinationSpot;
 	public Transform OriginSpot;
 	public float Speed;
-	public bool toOrigin = false;
+	public  bool toOrigin = false;
 	
 	void FixedUpdate()
 	{
@@ -29,4 +29,5 @@ public class PlatformMove : MonoBehaviour
 			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position, Speed);
 		}
 	}
+
 }

@@ -13,14 +13,38 @@ using System.Collections;
     */
 public class MoveWithPlatform : MonoBehaviour {
 
-	private int speed = 5;
-	public bool right = false;
-	public bool left = false;
-	public bool up = false;
-	public bool down = false;
+	public Transform black_platform;
+	public Transform DestinationSpot;
+	public Transform OriginSpot;
+	public float Speed;
+	public bool toOrigin = false;
 
-	void CollisionEnter2D(Collision2D collide){
-		transform.Translate(Vector3.right * 0.1f * Time.deltaTime);
+void OnCollisionEnter2D(Collision2D collision){
+		if(collision.gameObject.name == "black_platform" || collision.gameObject.name == "white_platform"){
+			movement();
 		}
+	}
 
+
+	void movement()
+	{
+		if(black_platform.transform.position == DestinationSpot.position)
+		{
+			toOrigin = true;
+		}
+		if(black_platform.transform.position == OriginSpot.position)
+		{
+			toOrigin = false;
+		}
+		
+		if(toOrigin)
+		{
+			transform.position = Vector3.MoveTowards(transform.position, OriginSpot.position*1.05f, Speed);
+		}
+		else
+		{
+			// If Switch is false, it tells the platform to move to the destination.
+			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position*1.05f, Speed);
+		}
+	}
 }
