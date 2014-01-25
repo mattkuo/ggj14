@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CharacterMove.cs" />
-     <Compile Include="Assets\Death.cs" />
-     <Compile Include="Assets\ForceDirection.cs" />
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\MoveWithPlatform.cs" />
-     <Compile Include="Assets\NewBehaviourScript.cs" />
-     <Compile Include="Assets\NextLevelW.cs" />
-     <Compile Include="Assets\PlatePressed.cs" />
-     <Compile Include="Assets\PlatformMove.cs" />
+     <Compile Include="Assets\Scripts\CharacterMove.cs" />
+     <Compile Include="Assets\Scripts\Death.cs" />
+     <Compile Include="Assets\Scripts\ForceDirection.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MoveWithPlatform.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\NextLevelW.cs" />
+     <Compile Include="Assets\Scripts\PlatePressed.cs" />
+     <Compile Include="Assets\Scripts\PlatformMove.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
