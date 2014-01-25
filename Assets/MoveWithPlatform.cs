@@ -16,15 +16,14 @@ public class MoveWithPlatform : MonoBehaviour {
 	public Transform black_platform;
 	public Transform DestinationSpot;
 	public Transform OriginSpot;
-	public  float Speed;
-	public  bool toOrigin = false;
+	public float Speed;
+	public bool toOrigin = false;
 
 void OnCollisionEnter2D(Collision2D collision){
 		if(collision.gameObject.name == "black_platform"){
 			movement();
 		}
 	}
-
 
 
 	void movement()
@@ -40,12 +39,12 @@ void OnCollisionEnter2D(Collision2D collision){
 		
 		if(toOrigin)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, OriginSpot.position, Speed);
+			transform.position = Vector3.MoveTowards(transform.position, OriginSpot.position*1.05f, Speed);
 		}
 		else
 		{
 			// If Switch is false, it tells the platform to move to the destination.
-			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position, Speed);
+			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position*1.05f, Speed);
 		}
 	}
 }
