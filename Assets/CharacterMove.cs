@@ -9,7 +9,10 @@ public class CharacterMove : MonoBehaviour {
 	public float jumpForce = 300f;
 //	private bool isBlackPlayer;
 //	public bool isActivePlayer;
-
+	public static bool isBlackReady = false;
+	public static bool isWhiteReady = false;
+	private GameObject whiteGoal;
+	private GameObject blackGoal;
 	// Use this for initialization
 	void Start () {
 //		if (gameObject.name == "black_player") {
@@ -23,7 +26,9 @@ public class CharacterMove : MonoBehaviour {
 //			if (!GameManager.isSelectedBlack && !isBlackPlayer) {
 //				isActivePlayer = true;
 //			}
-//		}
+		//	
+		whiteGoal = GameObject.Find ("WhiteGoal");
+		blackGoal = GameObject.Find ("BlackGoal");
 	}
 	
 	// Update is called once per frame
@@ -40,6 +45,9 @@ public class CharacterMove : MonoBehaviour {
 					jump = true;
 					isGrounded = false;
 			}
+		if (isWhiteReady == true && isBlackReady ==true) {
+			Application.LoadLevel ("tutorial2_jump");
+		}
 	}
 
 	void FixedUpdate () {
@@ -54,5 +62,12 @@ public class CharacterMove : MonoBehaviour {
 		//if(hit.gameObject.name == "black_ground")
 		isGrounded = true;
 	}
-
+	void OnCollisionStay2D (Collision2D collision){
+		if (collision.gameObject.Equals (whiteGoal)) {
+			isWhiteReady=true;
+		}
+		if (collision.gameObject.Equals (blackGoal)) {
+			isBlackReady=true;		
+		}
+	}
 }
