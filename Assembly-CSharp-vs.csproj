@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterMove.cs" />
+     <Compile Include="Assets\Death.cs" />
      <Compile Include="Assets\ForceDirection.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\MoveWithPlatform.cs" />
