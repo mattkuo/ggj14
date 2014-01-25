@@ -49,9 +49,9 @@
      <Compile Include="Assets\CharacterMove.cs" />
      <Compile Include="Assets\ForceDirection.cs" />
      <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\LoadNextLevel.cs" />
      <Compile Include="Assets\MoveWithPlatform.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\NextLevelW.cs" />
      <Compile Include="Assets\PlatePressed.cs" />
      <Compile Include="Assets\PlatformMove.cs" />
   </ItemGroup>

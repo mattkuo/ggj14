@@ -16,10 +16,6 @@ public class GameManager : MonoBehaviour {
 		whitePlayer = GameObject.Find ("white_player");
 		blackPlayer = GameObject.Find ("black_player");
 		whitePlayer.GetComponent<CharacterMove> ().enabled = false;
-		isBlackReady = false;
-		isWhiteReady = false;
-		whiteGoal = GameObject.Find ("WhiteGoal");
-		blackGoal = GameObject.Find ("BlackGoal");
 	}
 	
 	// Update is called once per frame
@@ -34,17 +30,7 @@ public class GameManager : MonoBehaviour {
 			whitePlayer.GetComponent<CharacterMove> ().enabled = !isSelectedBlack;
 		}
 
-		if (isWhiteReady == true) {
-			Application.LoadLevel ("tutorial2_jump");
-				}
 	}
 
-	void OnCollisionEnter2D (Collision2D collision){
-		if (collision.gameObject.Equals (whiteGoal)) {
-			isWhiteReady=true;
-				}
-//		if (collision.gameObject.Equals (blackGoal)) {
-//			isBlackReady=true;		
-//		}
-	}
+
 }
