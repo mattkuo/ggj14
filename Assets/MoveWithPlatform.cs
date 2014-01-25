@@ -20,7 +20,7 @@ public class MoveWithPlatform : MonoBehaviour {
 	public bool toOrigin = false;
 
 void OnCollisionEnter2D(Collision2D collision){
-		if(collision.gameObject.name == "black_platform"){
+		if(collision.gameObject.name == "black_platform" || collision.gameObject.name == "white_platform"){
 			movement();
 		}
 	}
