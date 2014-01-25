@@ -5,8 +5,8 @@ public class PlatformMove : MonoBehaviour
 {
 	public Transform DestinationSpot;
 	public Transform OriginSpot;
-	public float Speed;
-	public bool toOrigin = false;
+	public  float Speed;
+	public  bool toOrigin = false;
 	
 	void FixedUpdate()
 	{
