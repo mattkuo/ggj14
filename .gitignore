@@ -13,6 +13,7 @@ ExportedObj/
 *.unityproj
 *.booproj
 *.csproj
+*.csproject
 .DS_Store
 .DS_Store?
 ._*
