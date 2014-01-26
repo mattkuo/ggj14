@@ -57,7 +57,7 @@ public class CharacterMove : MonoBehaviour
 				print (hit.gameObject.name);
 				for (int i=0; i<hit.contacts.Length; i++) {
 						if (hit.contacts [i].normal.y > 0) {
-								print ("Hit blackground");
+						//		print ("Hit blackground");
 								isGrounded = true;
 						}
 				}
