@@ -29,7 +29,7 @@ public class ButtonGravity : MonoBehaviour
 						player.gravityScale = -1;
 					} else {
 			rev = false;
-			player.gravityScale=1;
+			player.gravityScale=9.8f;
 				}
 			
 
@@ -41,7 +41,6 @@ public class ButtonGravity : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D collision)
 		{
-			
 			
 						isActivated = true;
 						GetComponent<SpriteRenderer> ().sprite = activated;
