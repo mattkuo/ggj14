@@ -6,6 +6,10 @@ public class PlatePressed : MonoBehaviour
 		public Sprite activated;
 		public Sprite deactivated;
 		private bool isActivated = false;
+		public Transform DestinationSpot;
+
+		public float Speed;
+		public Sprite receiver;
 
 		// Use this for initialization
 		void Start ()
@@ -16,12 +20,17 @@ public class PlatePressed : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-		
+			
 		}
+		void moveReceiver(){
+		transform.Translate ();
+		}
+
 
 		void OnCollisionEnter2D (Collision2D collision)
 		{
-				SendMessage ("PlatePressed", true);
+			SendMessage ("moveReceiver");
+//			SendMessage ("PlatePressed", true);
 				if (collision.gameObject.name == "black_player") {
 						isActivated = true;
 						GetComponent<SpriteRenderer> ().sprite = activated;
@@ -30,7 +39,7 @@ public class PlatePressed : MonoBehaviour
 
 		void OnCollisionExit2D (Collision2D collisionInfo)
 		{
-				SendMessage ("PlatePressed", false);
+//				SendMessage ("PlatePressed", false);
 				isActivated = false;
 				GetComponent<SpriteRenderer> ().sprite = deactivated;
 		}
