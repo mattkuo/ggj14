@@ -55,8 +55,8 @@ public class CharacterMove : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D hit)
 		{
-				//if(hit.gameObject.name == "black_ground")
-				isGrounded = true;
+				//if (hit.gameObject.name == "black_ground")
+						isGrounded = true;
 		}
 
 }
