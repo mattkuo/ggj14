@@ -9,7 +9,7 @@ public class PlatePressed : MonoBehaviour
 		public Transform DestinationSpot;
 
 		public float Speed;
-		public Sprite receiver;
+		public GameObject receiver;
 
 		// Use this for initialization
 		void Start ()
@@ -24,6 +24,7 @@ public class PlatePressed : MonoBehaviour
 		}
 		void moveReceiver(){
 //		transform.Translate ();
+		receiver.transform.position = Vector3.MoveTowards(receiver.transform.position, DestinationSpot.position, Speed);
 		}
 
 
