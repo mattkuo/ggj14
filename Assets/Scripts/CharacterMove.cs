@@ -41,7 +41,9 @@ public class CharacterMove : MonoBehaviour
 						if (Input.GetKey (KeyCode.UpArrow) && isGrounded == true) {
 								jump = true;
 								isGrounded = false;
-						}
+				audio.Play();
+
+					}
 				} else {
 						if (Input.GetKey (KeyCode.RightArrow)) {
 								transform.Translate (Vector3.right * speed * Time.deltaTime);
@@ -53,6 +55,7 @@ public class CharacterMove : MonoBehaviour
 						if (Input.GetKey (KeyCode.DownArrow) && isGrounded == true) {
 								jump = true;
 								isGrounded = false;
+				audio.Play();
 						}
 				}
 		}
@@ -63,6 +66,7 @@ public class CharacterMove : MonoBehaviour
 
 						if (!isGravityReversed) {
 								rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+
 						} else {
 								rigidbody2D.AddForce (new Vector2 (0f, -1.0f * jumpForce));
 						

@@ -36,6 +36,7 @@ public class NextLevelW : MonoBehaviour
 		
 		if (isBlackReady == true && isWhiteReady == true) {
 			print ("both true");
+			audio.Play();
 			if(Application.loadedLevelName == "tutorial1_straight")
 			Application.LoadLevel ("tutorial2_jump");
 
