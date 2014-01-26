@@ -5,8 +5,8 @@ public class ButtonGravity : MonoBehaviour
 {
 	private bool isGrounded = true;
 	private bool revjump = false;
-	public int gravNum = 1;
-	public int revGravNum = -1;
+	public float gravNum = 1;
+	public float revGravNum = -1;
 
 
 
