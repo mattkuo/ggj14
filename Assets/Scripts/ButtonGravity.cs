@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlatePressed : MonoBehaviour
+public class ButtonGravity : MonoBehaviour
 {
 	private bool isGrounded = true;
 	private bool revjump = false;

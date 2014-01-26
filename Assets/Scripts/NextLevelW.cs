@@ -44,6 +44,7 @@ public class NextLevelW : MonoBehaviour
 			Application.LoadLevel ("tutorial4_platform");
 
 
+
 			isWhiteReady=false;
 			isBlackReady=false;
 		}
