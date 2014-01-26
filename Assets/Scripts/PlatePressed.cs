@@ -23,7 +23,7 @@ public class PlatePressed : MonoBehaviour
 			
 		}
 		void moveReceiver(){
-		transform.Translate ();
+//		transform.Translate ();
 		}
 
 
