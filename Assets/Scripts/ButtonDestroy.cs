@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlatePressed : MonoBehaviour
+public class ButtonDestroy : MonoBehaviour
 {
 		public Sprite activated;
 		public Sprite deactivated;
