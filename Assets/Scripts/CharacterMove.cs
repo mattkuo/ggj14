@@ -13,7 +13,6 @@ public class CharacterMove : MonoBehaviour
 
 		void Awake ()
 		{
-				print ("Load player");
 				if (gameObject.name == "black_player") {
 						GameManager.blackPlayer = gameObject;
 				} else {
@@ -46,7 +45,6 @@ public class CharacterMove : MonoBehaviour
 		void FixedUpdate ()
 		{
 				if (jump == true) {
-						print ("JUMP");
 						rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 						jump = false;
 				}
@@ -54,10 +52,8 @@ public class CharacterMove : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D hit)
 		{
-				print (hit.gameObject.name);
 				for (int i=0; i<hit.contacts.Length; i++) {
 						if (hit.contacts [i].normal.y > 0) {
-								print ("Hit blackground");
 								isGrounded = true;
 						}
 				}
