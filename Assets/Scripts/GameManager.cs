@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("GameManager started");
-//		Physics2D.IgnoreLayerCollision (8, 11, true);
-//		Physics2D.IgnoreLayerCollision (9, 10, true);
 		whitePlayer.GetComponent<CharacterMove> ().enabled = false;
 	}
 	
