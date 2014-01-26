@@ -47,8 +47,13 @@ public class NextLevelW : MonoBehaviour
 			Application.LoadLevel ("tutorial4_platform");
 
 			if(Application.loadedLevelName == "tutorial4_platform")
-				Application.LoadLevel ("seperateentity");
+				Application.LoadLevel ("tutorial5_button");
 
+			if(Application.loadedLevelName == "tutorial5_button")
+				Application.LoadLevel ("tutorial6_teleport");
+
+			if(Application.loadedLevelName == "tutorial6_teleport")
+				Application.LoadLevel("seperateentity");
 			
 			if(Application.loadedLevelName == "seperateentity")
 				Application.LoadLevel ("level_move_spikes");
