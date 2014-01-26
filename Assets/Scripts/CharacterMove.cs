@@ -73,9 +73,7 @@ public class CharacterMove : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D hit)
 		{
-		print (hit.gameObject.name);
 				if (!isGravityReversed) {
-
 						for (int i=0; i<hit.contacts.Length; i++) {
 								if (hit.contacts [i].normal.y > 0) {
 										isGrounded = true;
@@ -86,6 +84,7 @@ public class CharacterMove : MonoBehaviour
 								if (hit.contacts [i].normal.y < 0) {
 										isGrounded = true;
 								}
+
 						}
 				}
 		}

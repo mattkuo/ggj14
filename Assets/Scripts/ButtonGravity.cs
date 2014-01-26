@@ -7,6 +7,7 @@ public class ButtonGravity : MonoBehaviour
 		private bool revjump = false;
 		public int gravNum = 1;
 		public int revGravNum = -1;
+
 		public Sprite activated;
 		public Sprite deactivated;
 		private bool isActivated = false;
