@@ -5,7 +5,8 @@ public class ButtonGravity : MonoBehaviour
 {
 	private bool isGrounded = true;
 	private bool revjump = false;
-	public float revjumpForce = -300f;
+	public float gravNum = 1;
+	public float revGravNum = -1;
 
 
 
@@ -26,10 +27,10 @@ public class ButtonGravity : MonoBehaviour
 		{
 			if (isActivated) {
 						rev = true;
-						player.gravityScale = -1;
+						player.gravityScale = revGravNum;
 					} else {
 			rev = false;
-			player.gravityScale=9.8f;
+			player.gravityScale=gravNum;
 				}
 			
 

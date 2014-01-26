@@ -13,7 +13,7 @@ public class CharacterMove : MonoBehaviour
 
 		void Awake ()
 		{
-		print ("Load player");
+				print ("Load player");
 				if (gameObject.name == "black_player") {
 						GameManager.blackPlayer = gameObject;
 				} else {
@@ -52,11 +52,14 @@ public class CharacterMove : MonoBehaviour
 				}
 		}
 
-
 		void OnCollisionEnter2D (Collision2D hit)
 		{
-				//if (hit.gameObject.name == "black_ground")
-						isGrounded = true;
+				print (hit.gameObject.name);
+				for (int i=0; i<hit.contacts.Length; i++) {
+						if (hit.contacts [i].normal.y > 0) {
+								print ("Hit blackground");
+								isGrounded = true;
+						}
+				}
 		}
-
 }
