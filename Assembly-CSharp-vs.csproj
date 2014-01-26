@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ButtonDestroy.cs" />
      <Compile Include="Assets\Scripts\CharacterMove.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
      <Compile Include="Assets\Scripts\ForceDirection.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MoveWithPlatform.cs" />
      <Compile Include="Assets\Scripts\NextLevelW.cs" />
-     <Compile Include="Assets\Scripts\PlatePressed.cs" />
      <Compile Include="Assets\Scripts\PlatformMove.cs" />
      <Compile Include="Assets\Scripts\movingSpikes.cs" />
   </ItemGroup>
