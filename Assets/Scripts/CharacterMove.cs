@@ -7,6 +7,9 @@ public class CharacterMove : MonoBehaviour {
 	private bool isGrounded = true;
 	private bool jump = false;
 	public float jumpForce = 300f;
+	private bool revJump = false;
+	public float revJumpForce = -200f;
+
 	public static bool isBlackReady = false;
 	public static bool isWhiteReady = false;
 	private GameObject whiteGoal;
@@ -24,14 +27,13 @@ public class CharacterMove : MonoBehaviour {
 			if (Input.GetKey (KeyCode.LeftArrow)) {
 					transform.Translate (Vector3.left * speed * Time.deltaTime);
 			}
+			
 
 			if (Input.GetKey (KeyCode.UpArrow) && isGrounded == true) {
 					jump = true;
 					isGrounded = false;
 			}
-		if (isWhiteReady == true && isBlackReady ==true) {
-			Application.LoadLevel ("tutorial2_jump");
-		}
+	
 	}
 
 	void FixedUpdate () {
@@ -40,6 +42,7 @@ public class CharacterMove : MonoBehaviour {
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 			jump = false;
 		}
+	
 	}
 
 	void OnCollisionEnter2D (Collision2D hit) {

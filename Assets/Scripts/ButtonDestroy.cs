@@ -8,6 +8,7 @@ public class ButtonDestroy : MonoBehaviour
 		private bool isActivated = false;
 		//public Transform DestinationSpot;
 
+		//public float Speed;
 		public GameObject receiver;
 
 		// Use this for initialization

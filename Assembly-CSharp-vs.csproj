@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonDestroy.cs" />
+     <Compile Include="Assets\Scripts\ButtonGravity.cs" />
      <Compile Include="Assets\Scripts\CharacterMove.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
      <Compile Include="Assets\Scripts\ForceDirection.cs" />
