@@ -39,12 +39,12 @@ void OnCollisionEnter2D(Collision2D collision){
 		
 		if(toOrigin)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, OriginSpot.position*1.05f, Speed);
+			transform.position = Vector3.MoveTowards(transform.position, OriginSpot.position*5, Speed);
 		}
 		else
 		{
 			// If Switch is false, it tells the platform to move to the destination.
-			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position*1.05f, Speed);
+			transform.position = Vector3.MoveTowards(transform.position, DestinationSpot.position*5, Speed);
 		}
 	}
 }
