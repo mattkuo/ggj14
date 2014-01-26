@@ -42,6 +42,17 @@ public class NextLevelW : MonoBehaviour
 			Application.LoadLevel ("tutorial3_spikes");
 			if(Application.loadedLevelName == "tutorial3_spikes")
 			Application.LoadLevel ("tutorial4_platform");
+			if(Application.loadedLevelName == "tutorial4_platform")
+				Application.LoadLevel ("level_move_spikes");
+			if(Application.loadedLevelName == "level_move_spikes")
+				Application.LoadLevel ("diagonal Level");
+			if(Application.loadedLevelName == "diagonal Level")
+				Application.LoadLevel ("hardlevel1");
+			if(Application.loadedLevelName == "hardlevel1")
+				Application.LoadLevel ("timelyDeath");
+
+
+
 
 
 
